@@ -1,0 +1,14 @@
+.text-header-report {
+  margin: 0;
+  padding: 10px;
+  font-size: 22px;
+  background-color: #304ffe;
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+}
+.width{
+  width: 20%;
+}
+.pad{
+  padding: 10px;
+}

@@ -1,0 +1,269 @@
+@font-face {
+  font-family: "Kanit-Medium";
+  src: url("/font/Kanit-Medium.ttf");
+}
+@font-face {
+  font-family: "Kanit-Light";
+  src: url("/font/Kanit-Light.ttf");
+}
+@font-face {
+  font-family: "Kanit-Regular";
+  src: url("/font/Kanit-Regular.ttf");
+}
+@font-face {
+  font-family: "Kanit-ExtraLight";
+  src: url("/font/Kanit-ExtraLight.ttf");
+}
+
+.r1-style {
+  background-color: #000657;
+  color: #ffffff;
+}
+
+.r1-c1 {
+  text-align: left;
+}
+
+.r1-c2 {
+  text-align: right;
+}
+.r2 {
+  height: 73px;
+}
+
+.r4-pad {
+  padding-top: 30px;
+}
+.box-bg {
+  background-color: #f3f3f3;
+  width: 623px;
+  height: 338px;
+  margin: 6px;
+}
+.box-bg:hover {
+  background-color: rgba(219, 219, 219, 0.829);
+  width: 625px;
+  height: 340px;
+}
+.img1-box {
+  widows: 166px;
+  height: 166px;
+}
+.img2-box {
+  widows: 197px;
+  height: 197px;
+}
+.img3-box {
+  widows: 163px;
+  height: 163px;
+}
+.img4-box {
+  widows: 116px;
+  height: 116px;
+}
+.img5-box {
+  widows: 135px;
+  height: 135px;
+}
+.img6-box {
+  widows: 129px;
+  height: 129px;
+}
+.footer-style {
+  color: #a12828;
+  background-color: #040034;
+
+  font-family: "Kanit-ExtraLight";
+  font-size: 20px;
+}
+.footer-style2 {
+  color: #4f4f4f;
+  background-color: #ffffff;
+  
+  font-family: "Kanit-ExtraLight";
+  font-size: 20px;
+}
+.footer-padding {
+  padding: 10px;
+  
+}
+.bg-img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.slide-right {
+  color: #ffffff;
+  margin-left: 10%;
+  margin-top:15% ;
+  position: absolute;
+  z-index: 1;
+  height: 62%;
+  width:90%;
+  overflow:hidden;
+}
+
+.slide-right .slide-right-text01  {
+  animation: 2s slide-right;
+}
+
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+    width: 300%; 
+  }
+
+  to {
+    
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.center2 {
+  position: absolute;
+  left: 15%;
+  top: 1%;
+  width: 50%;
+  text-align: center;
+}
+.center3 {
+  position: absolute;
+  left: 15%;
+  top: 0%;
+  width: 50%;
+  text-align: center;
+}
+.coler-bg {
+  background-color: rgba(243, 242, 242, 0.281);
+  height: 150px;
+  border-radius: 10px;
+  width: 1000px;
+ 
+}
+.box-style1 {
+  font-size: 30px;
+  font-family: "Kanit-Medium";
+  color: #040034;
+}
+.box-style2 {
+  font-size: 24px;
+  font-family: "Kanit-Light";
+  color: #0d047a;
+}
+
+.image-bg {
+  background: url("./Img/ควายป่า.jpg");
+  width: 50%;
+
+}
+.image-bg1 {
+  background: url("./Img/ควายป่า.jpg");
+  width: 50%;
+ 
+}
+.r-martop {
+  margin-top: 5%;
+}
+.bg-box-log-color {
+  background-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: #d3d3d3;
+}
+.form-padding {
+  padding: 20px;
+  width: 475px;
+  height: 545px;
+}
+.container123 {
+  position: relative;
+}
+
+.form-padding-top {
+  padding-top: 70px;
+}
+.form-padding-top2 {
+  padding-top: 15px;
+}
+
+/*.bt {
+  background-color: #f14000;
+  border-color: #f14000;
+}
+
+.bt:visited {
+  background-color: #f14000;
+  border-color: #f14000;
+}
+
+.bt:hover {
+  background-color: #ff4b09;
+  border-color: #f14000;
+}
+
+.bt:active {
+  background-color: #f14000;
+  border-color: #f14000;
+}
+
+.bt:focus {
+  background-color: #f14000;
+  border-color: #f14000;
+}
+
+.bt:not(:disabled):not(.disabled):active,
+.bt:not(:disabled):not(.disabled).active,
+.show > .bt.dropdown-toggle {
+  background-color: #f14000;
+  border-color: #f14000;
+}
+*/
+.title1 {
+  font-size: 40px;
+  font-family: "Kanit-ExtraLight";
+  color: #000657;
+  text-align: center;
+  padding-top: 45px;
+}
+
+.form-regis {
+  border: #707070;
+  width: 0px;
+  height: 0px;
+}
+
+.title-regis {
+  font-family: "Kanit-Light";
+  font-size: 26px;
+  text-align: center;
+  color: #000657;
+  padding-top: 35px;
+  padding-bottom: 10px;
+}
+
+.button-text {
+  font-family: "Kanit-Regular";
+}
+
+.button-w {
+  width: 186px;
+  text-align: center;
+}
+
+.boxImgFrom {
+  padding-top: 35px;
+}
+
+.button-w2 {
+  width: 250px;
+  margin: 10px;
+
+}
+
+
+.cccc{
+  color:#d9dcf8bd;
+}

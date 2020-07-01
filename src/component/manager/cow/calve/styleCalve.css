@@ -1,0 +1,13 @@
+.fs{
+    font-size: 18px;
+}
+
+.text-header-clave{
+    margin: 0;
+    padding: 10px;
+    font-size:22px ;
+  background-color:#304ffe ;
+    color: #fff;
+    border-radius:5px 5px 0 0 ;
+    
+}

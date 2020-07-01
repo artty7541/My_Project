@@ -1,0 +1,99 @@
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import SaveIcon from '@material-ui/icons/Save';
+import './CalfStyle.css';
+const useStyles = makeStyles({
+  table: {
+    minWidth: 650,
+  },
+  fonts:{
+    fontSize:"30px"
+  }
+  
+});
+
+function createData(name, calories, fat, carbs, protein) {
+  return { name, calories, fat, carbs, protein };
+}
+
+const rows = [
+  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
+  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
+  createData('Eclair', 262, 16.0, 24, 6.0),
+  createData('Cupcake', 305, 3.7, 67, 4.3),
+  createData('Gingerbread', 356, 16.0, 49, 3.9),
+];
+
+export default function TableCalve() {
+  const classes = useStyles();
+
+  return (
+    <TableContainer component={Paper} style={{marginTop:"20px"}}>
+       <div className="text-header-clave">บันทึกการตรวจท้อง</div>
+      <Table className={classes.table} aria-label="simple table">
+     
+        <TableHead >
+        
+          <TableRow >
+            <TableCell align="left"><div className="fs">ลำดับ</div></TableCell>
+            <TableCell align="center"><div className="fs">น้ำหนัก</div></TableCell>
+            <TableCell align="center"><div className="fs">วันเกิด</div></TableCell>
+            <TableCell align="center"><div className="fs">เพศ</div></TableCell>
+            <TableCell align="center"><div className="fs">พ่อ</div></TableCell>
+            <TableCell align="center"><div className="fs">แม่</div></TableCell>
+            <TableCell align="center"><div className="fs">วันสักหู</div></TableCell>
+            <TableCell align="center"><div className="fs">วันสูญเขา</div></TableCell>
+            <TableCell align="center"><div className="fs">วันหย่านม</div></TableCell>
+            <TableCell align="center"><div className="fs">ADG</div></TableCell>
+            <TableCell align="center"><div className="fs">วันตีเบอร์</div></TableCell> 
+            <TableCell align="center"><div className="fs">สายพันธุ์</div></TableCell> 
+            <TableCell align="center"><div className="fs">หมายเลขโค</div></TableCell> 
+            <TableCell align="center"><div className="fs">หมายเหตุ</div></TableCell> 
+            <TableCell align="center"><div className="fs">บันทึก</div></TableCell> 
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow key={row.name}>
+              <TableCell align="center">
+                {row.fat}
+              </TableCell>
+              <TableCell align="center">{row.calories}</TableCell>
+              <TableCell align="center">{row.fat}</TableCell>
+              <TableCell align="center"> {row.fat}</TableCell>
+              <TableCell align="center"><TextField  variant="outlined" size="small" /></TableCell>
+              <TableCell align="center"><TextField  variant="outlined" size="small" /></TableCell>
+              <TableCell align="center"><TextField   variant="outlined" size="small" /></TableCell>
+              <TableCell align="center"><TextField   variant="outlined" size="small" /></TableCell>
+              <TableCell align="center"><TextField   variant="outlined" size="small" /></TableCell>
+              <TableCell align="center"><TextField   variant="outlined" size="small" /></TableCell>
+              <TableCell align="center"><TextField   variant="outlined" size="small" /></TableCell>
+              <TableCell align="center"><TextField   variant="outlined" size="small" /></TableCell>
+              <TableCell align="center"><TextField   variant="outlined" size="small" /></TableCell>
+              <TableCell align="center"><TextField id="outlined-basic"  variant="outlined" size="small" /></TableCell>
+              <TableCell align="center"> <Button
+        variant="contained"
+        color="primary"
+        size="small"
+     style={{outline:"none"}}
+        startIcon={<SaveIcon />}
+      >
+        Save
+      </Button></TableCell>
+          
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}

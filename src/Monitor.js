@@ -1,12 +1,16 @@
-import React from "react";
-import Header from "./components/Header";
+import React, { Component } from 'react';
+import Webpage from '../src/component/Webpage/webpage';
+class Monitor extends Component{
 
-const Footer = (props) => {
-  return (
-    <div>
-      <Header />
-    </div>
-  );
-};
+  render(){
+    return(
+      <div>
+        
+        <Webpage/>
 
-export default Footer;
+      </div>
+    )
+  }
+}
+
+export default Monitor;

@@ -1,3 +1,6 @@
+สามารถสอบถามได้ตรงนี้เลยนะครับ............
+-->
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -68,13 +71,74 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 
+### GIT
+or create a new repository on the command line
+echo "# myweb" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/jaykittiwat/myweb.git
+git push -u origin master
+                
+…or push an existing repository from the command line
+git remote add origin https://github.com/jaykittiwat/myweb.git
+git push -u origin master
 
 
 
+### git
+1.git remote -v
+2.git remote add origin https://github.com/jaykittiwat/myweb.git
+3.git push origin master
+
+### GIT add update
 1. git add .
 2. git commit -m "update to remote githup"
 3. git push origin master
-อัพขั้น
-  
- git pull origin master 
- 
+
+
+
+5/26/2020 +++ 
+npm install @material-ui/core
+npm i --save date-fns@next @date-io/date-fns
+npm i @material-ui/pickers
+npm i --save date-fns@next @date-io/date-fns@1.x
+npm install chart.js --save
+npm insta//
+npm install axios
+react-bootstrap
+react-router-dom
+ืnpm install axios --save
+npm install firebase react-router-dom axios react-bootstrap
+npm i mdbootstrap
+npm install simple-react-calendar
+npm install bulma --save
+npm install react-bootstrap-table-next --save
+
+npm update http-proxy --depth 4
+
+--เกร็จเล๋กเก็ดน้อย   //น่าจะไม่ได้ใช้   React hook
+
+function FormExample() {
+  const [validated, setValidated] = useState(false); -->เซต validater = false
+
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    setValidated(true);
+  };
+
+
+
+  1.res.Json แปลงเป็น json
+
+
+  var d = new Date();
+var d = new Date(milliseconds);
+var d = new Date(dateString);
+var d = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+

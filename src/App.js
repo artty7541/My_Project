@@ -1,60 +1,65 @@
-import React, { Component } from "react";
-import Header from "./components/Header";
-import "./photo.css";
-import Footer from "./components/Footer";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import login from "./components/login";
-import Monitor from "./Monitor";
-import dash from "./components/dash";
-import regis from "./components/regis"; 
-import bufnew from "./components/bufnew";
-import out from "./components/out";
-import regisfarm from "./components/regisfarm";
-import searchandRegistrational from "./components/searchandRegistrational";
-import trace from "./components/trace";
-import finish from "./components/finish";
-import information from "./components/information";
-import payment from "./components/payment";
-class App extends Component {
-  render() {
-    return (
-      <div className="container-fluid">
-        <div className="row  ">
-          <div className="container-fluid">
-            <Header />
-          </div>
-        </div>
+import React, { Component } from 'react';
+import Monitor from './Monitor';
+import {BrowserRouter,Route,Switch} from "react-router-dom";
+//import Loginpage from './component/Login/Loginpage';
+import Registor from './component/Login/registor';
+import Registor2 from './component/Login/registor2';
+import login from "./component/Login/login";
+import regiscow from './component/regiscow/regiscow';
 
-        <div className="row"></div>
-        <div className="row r1"></div>
-      </div>
-    );
-  }
-  renderRouter() {
-    return (
+import induction from "./component/manager/cow/induction/induction";
+import breed from "./component/manager/cow/breed/breed";
+import checkup from "./component/manager/cow/checkUp/checkup";
+import calve from "./component/manager/cow/calve/calve";
+import abortion from "./component/manager/cow/abortion/abortion";
+import calfmanage from "./component/manager/calf/calfmanage";
+import treatment from "./component/treatment/treatment";
+import notification from "./component/notification/notification";
+import checkinformation from "./component/checkinformationandreport/checkinformation/checkinformation";
+import report from "./component/checkinformationandreport/report/report";
+import brandsetting from "./component/setting/brand/brandsetting";
+import drugsetting from "./component/setting/drug/drugsetting";
+import farmsetting from "./component/setting/farm/farmsetting";
+import usersetting from "./component/setting/user/usersetting";
+import instructionmanual from "./component/instructionmanual/instructionmanual";
+
+// Router to path componen
+class App extends Component{
+  
+  renderRouter(){
+    return(
       <Switch>
-        <Route exact path="/" component={Monitor} />
-        <Route path="/login" component={login} />
-        <Route path="/dash" component={dash} />
-        <Route path="/regis" component={regis} />
-        <Route path="/Footer" component={Footer} />
-        <Route path="/bufnew" component={bufnew} />
-        <Route path="/out" component={out} />
-        <Route path="/regisfarm" component={regisfarm} /> 
-        <Route path="/searchandRegistrational" component={searchandRegistrational} />
-        <Route path="/trace" component={trace} />
-        <Route path="/finish" component={finish} />
-        <Route path="/information" component={information} />
-        <Route payment="/information" component={payment} />
+        <Route exact path="/" component={Monitor}/>
+        <Route path="/login" component={login}/>
+        <Route path="/registor" component={Registor}/>
+        <Route path="/registor2" component={Registor2}/>
+        <Route path="/regiscow" component={regiscow}/>
+      
+        <Route path="/induction" component={induction}/>
+        <Route path="/breed" component={breed}/>
+        <Route path="/checkup" component={checkup}/>
+        <Route path="/calve" component={calve}/>
+        <Route path="/abortion" component={abortion}/>
+        <Route path="/calfmanage" component={calfmanage}/>
+        <Route path="/treatment" component={treatment}/>
+        <Route path="/notification" component={notification}/>
+        <Route path="/checkinformation" component={checkinformation}/>
+        <Route path="/report" component={report}/>
+        <Route path="/brandsetting" component={brandsetting}/>
+        <Route path="/drugsetting" component={drugsetting}/>
+        <Route path="/farmsetting" component={farmsetting}/>
+        <Route path="/usersetting" component={usersetting}/>
+        <Route path="/instructionmanual" component={instructionmanual}/>
       </Switch>
-    );
+    )
   }
-  render() {
-    return (
+  render(){
+    
+    return(
       <div>
-        <BrowserRouter>{this.renderRouter()}</BrowserRouter>
+      <BrowserRouter>{this.renderRouter()}</BrowserRouter>
       </div>
-    );
+    )
   }
 }
 

@@ -1,0 +1,34 @@
+.martop-10{
+    margin-top:20px ;
+  
+}
+.text-header{
+    margin: 0;
+    padding: 10px;
+    font-size:22px ;
+  background-color:#304ffe ;
+    color: #fff;
+    border-radius:5px 5px 0 0 ;
+    
+}
+.pad30{
+  padding: 30px;
+
+}
+.textField-width{
+ 
+    width: 100%;
+
+}
+.mar{
+  margin-left: 100px;
+}
+.textField-width600px{
+  width: 600px;
+}
+.pad10{
+  padding: 10px;
+}
+.textField-width300px{
+  width: 300px;
+}

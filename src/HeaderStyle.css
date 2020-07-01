@@ -1,0 +1,75 @@
+@font-face{
+    font-family: 'Kanit-Medium';
+    src: url('/font/Kanit-Medium.ttf');
+}
+@font-face{
+    font-family: 'Kanit-Light';
+    src: url('/font/Kanit-Light.ttf');
+}
+@font-face{
+    font-family: 'Kanit-Regular';
+    src: url('/font/Kanit-Regular.ttf');
+}
+.r2-c1{
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'Kanit-Light';
+}
+.r2-c1-t2
+{
+    color:#ffffff;
+    font-size: 20px;
+    font-family: 'Kanit-Regular';
+}
+
+.float-right{
+    float:right;
+}
+
+.color-head1{
+background-color: blue;
+}
+
+.dropbtn1 {
+    font-family: 'Kanit-Regular';
+    
+    color:#ffffff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height: 75px;
+    width:150px;
+    font-size: 20px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn1 {
+    background-color: #0011ffa6;
+    color: #f1f1f1;
+  }
