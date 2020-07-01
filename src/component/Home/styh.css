@@ -11,6 +11,7 @@
     border-radius: 0px 0px 5px 5px ;
     padding: 30px;
     width: 100%;
+    
 }
 .title{
     font-size: 30px;
@@ -20,5 +21,27 @@
     color: #666666;
 }
  
-
- 
+.coler-bg2 {
+    background-color: rgba(255, 255, 255, 0.815);
+    position: absolute;
+    margin-top: 1   px;
+    padding: 50px;
+    width: 1100px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .r-margin{
+    margin-bottom: 70px;
+    
+  }
+  .border-c4{
+  
+    border-style: solid;
+    border-color: #e7e7e7;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 10px #dddddd;
+  }
+  .pad-l{
+    padding-left: 100px;
+  }

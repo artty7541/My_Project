@@ -95,7 +95,7 @@
 
 
 .slide-right {
-  color: #ffffff;
+  color: #000000;
   margin-left: 10%;
   margin-top:15% ;
   position: absolute;
@@ -103,6 +103,7 @@
   height: 62%;
   width:90%;
   overflow:hidden;
+  
 }
 
 .slide-right .slide-right-text01  {

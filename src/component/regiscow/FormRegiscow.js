@@ -129,7 +129,7 @@ class FormRegiscow extends Component {
                 sentDataCow
               )
               .then(res => {
-                alert("ลงทะเบียนโคสำเร็จ");
+                alert("ลงทะเบียนกระบือสำเร็จ");
               })
               .catch(err => {
                 alert("เกิดข้อผิดพลาดกับระบบ");
@@ -144,7 +144,7 @@ class FormRegiscow extends Component {
                 sentDataCow
               )
               .then(res => {
-                alert("ลงทะเบียนโคสำเร็จ");
+                alert("ลงทะเบียนกระบือสำเร็จ");
               })
               .catch(err => {
                 alert("เกิดข้อผิดพลาดกับระบบ");
@@ -226,30 +226,32 @@ class FormRegiscow extends Component {
 
     return (
       <div>
-        <div style={{ paddingTop: "40px" }}>
+        <div className="coler-bg4 border-c" style={{ paddingTop: "40px" }}>
           <Form>
             <Form.Row>
-              <div className="container-fluid">
-                <div style={{ fontSize: "25px", textAlign: "center" }}>
-                  ลงทะเบียนพันธุ์ประวัติโค
+              <div className="container-fluid ">
+                <div className=" border-c1 " style={{ fontSize: "40px", textAlign: "center" ,backgroundColor: "#32a3ff", color: "white" }}>
+                  ลงทะเบียนพันธุ์ประวัติกระบือ
                 </div>
               </div>
+      
             </Form.Row>
             <Form.Row>
               <Col md={{ span: 4, offset: 1 }}>
                 <Form.Group>
-                  <Form.Label>ชื่อโค</Form.Label>
+                  <Form.Label>* ชื่อกระบือ</Form.Label>
                   <Form.Control
                     name="name_cow"
                     type="text"
                     placeholder="กรุณากรอกชื่อโค"
                     onChange={event => this.saveData(event)}
                   />
+                  
                 </Form.Group>
 
                 <Form.Group>
                   <Form.Label>
-                    หมายเลขประจำตัวสัตว์ (์NID/RFID/Microchip/เบอร์หู)
+                    หมายเลขประจำตัวกระบือ
                   </Form.Label>
                   <Form.Control
                     name="cattle_id"
@@ -259,19 +261,16 @@ class FormRegiscow extends Component {
                   />
                 </Form.Group>
                 <Form.Group>
-                  <Form.Label>ประเภทโค</Form.Label>
+                  <Form.Label>เลขปรจำฝูง</Form.Label>
                   <Form.Control
-                    as="select"
-                    name="CowCalf"
-                    onChange={event => this.saveDataCowOrCalf(event)}
-                  >
-                    <option value="">เลือก</option>
-                    <option value="cow">โค</option>
-                    <option value="calf">ลูกโค</option>
-                  </Form.Control>
+                    name="cattle_id"
+                    type="text"
+                    placeholder="กรุณากรอกหมายเลขประจำฝูง"
+                    onChange={event => this.saveData(event)}
+                  />
                 </Form.Group>
                 <Form.Group>
-                  <Form.Label>เพศ</Form.Label>
+                  <Form.Label>* เพศ</Form.Label>
                   <Form.Control
                     as="select"
                     name="sex"
@@ -283,7 +282,7 @@ class FormRegiscow extends Component {
                   </Form.Control>
                 </Form.Group>
                 <Form.Group>
-                  <Form.Label>วิธีผสม</Form.Label>
+                  <Form.Label>* วิธีผสม</Form.Label>
                   <Form.Control
                     as="select"
                     name="breed_method"
@@ -296,44 +295,50 @@ class FormRegiscow extends Component {
                 </Form.Group>
 
                 <Form.Group>
-                  <Form.Label>สายพันธุ์โค</Form.Label>
+                  <Form.Label>* ชื่อเจ้าของกระบือ</Form.Label>
                   <Form.Control
                     onChange={event => this.saveData(event)}
                     name="breed"
                     type="text"
-                    placeholder="กรุณากรอกสายพันธุ์"
+                    placeholder="กรุณากรอกชื่อเจ้าของ"
                   />
                 </Form.Group>
                 <Form.Group>
-                  <Form.Label>แม่พันธุ์</Form.Label>
+                  <Form.Label>สายพันธุ์กระบือ</Form.Label>
                   <Form.Control
                     name="dam_id"
                     type="text"
-                    placeholder="กรุณากรอกแม่พันธุ์"
+                    placeholder="กรุณากรอกสายพันธุ์"
                     onChange={event => this.saveData(event)}
                   />
                 </Form.Group>
-                <Form.Group controlId="sire_id">
-                  <Form.Label>พ่อพันธุ์</Form.Label>
+                <Form.Group controlId="breeder">
+                  <Form.Label>ผู้บำรุงสายพันธุ์</Form.Label>
                   <Form.Control
-                    name="sire_id"
+                    name="breeder"
                     type="text"
-                    placeholder="กรุณากรอกพ่อพันธุ์"
+                    placeholder="กรุณากรอกผู้บำรุงสายพันธุ์"
                     onChange={event => this.saveData(event)}
                   />
                 </Form.Group>
                 <Form.Group controlId="color">
-                  <Form.Label>สี</Form.Label>
+                <Form.Label>ชื่อพ่อพันธุ์</Form.Label>
                   <Form.Control
-                    as="select"
-                    name="color"
+                    name="sire_id"
+                    type="text"
+                    placeholder="กรุณากรอกชื่อพ่อพันธุ์ (ถ้ามี)"
                     onChange={event => this.saveData(event)}
                   >
-                    <option value="ไม่ระบุ">เลือก </option>
-                    <option>ขาว</option>
-                    <option>ดำ</option>
-                    <option>น้ำตาล</option>
-                    <option>แดง</option>
+                  </Form.Control>
+                </Form.Group>
+                <Form.Group controlId="color">
+                <Form.Label>ชื่อแม่พันธุ์</Form.Label>
+                  <Form.Control
+                    name="sire_id"
+                    type="text"
+                    placeholder="กรุณากรอกชื่อแม่พันธุ์ (ถ้ามี)"
+                    onChange={event => this.saveData(event)}
+                  >
                   </Form.Control>
                 </Form.Group>
 
@@ -346,16 +351,7 @@ class FormRegiscow extends Component {
                   />
                 </Form.Group>
 
-                <Form.Group //ต้องไปดูในแอพอีกที
-                >
-                  <Form.Label>ชื่อผู้ผสมพันธุ์</Form.Label>
-                  <Form.Control
-                    name="breeder"
-                    type="text"
-                    placeholder="กรุณากรอกชื่อโค"
-                    onChange={event => this.saveData(event)}
-                  />
-                </Form.Group>
+              
 
                 <Form.Group controlId="formwight">
                   <Form.Label>น้ำหนักตอนเกิด (กก.)</Form.Label>
@@ -380,29 +376,31 @@ class FormRegiscow extends Component {
                   <Form.Control
                     name="year_weight"
                     type="text"
-                    placeholder="กรุณากรอกน้ำหนักตอนเกิด (กก.)"
+                    placeholder="กรุณากรอกน้ำหนักตอนอายุ 1 ปี (กก.)"
+                    onChange={event => this.saveData(event)}
+                  />
+                </Form.Group>
+                <Form.Group controlId="formwight">
+                  <Form.Label>น้ำหนักอายุ 2ปี (กก.)</Form.Label>
+                  <Form.Control
+                    name="year_weight"
+                    type="text"
+                    placeholder="กรุณากรอกน้ำหนักตอนอายุ 2 ปี (กก.)"
                     onChange={event => this.saveData(event)}
                   />
                 </Form.Group>
 
                 <Form.Group controlId="formheight">
-                  <Form.Label>ความสูงโพก 1ปี (ซม.)</Form.Label>
+                  <Form.Label>รอบอก (ซม.)</Form.Label>
                   <Form.Control
                     name="year_hip_hight"
                     type="text"
-                    placeholder="กรุณากรอกความสูงสะโพก (ซม.)"
+                    placeholder="กรุณากรอกรอบอก(ซม.)"
                     onChange={event => this.saveData(event)}
                   />
                 </Form.Group>
-                <Form.Group controlId="formchest">
-                  <Form.Label>ขนาดรอบอกตอนเกิด (ซม.)</Form.Label>
-                  <Form.Control
-                    onChange={event => this.saveData(event)}
-                    name="birth_chest_head_ratio"
-                    type="text"
-                    placeholder="กรุณากรอกขนาดรอบอกตอนเกิด (ซม.)"
-                  />
-                </Form.Group>
+                
+               
                 <Form.Group controlId="formchest">
                   <Form.Label>ขนาดรอบอกหลังอย่านม (ซม.)</Form.Label>
                   <Form.Control
@@ -424,43 +422,37 @@ class FormRegiscow extends Component {
                 </Form.Group>
 
                 <Form.Group controlId="formhouse">
-                  <Form.Label>โรงเรือน</Form.Label>
+                  <Form.Label>ความสูงหัวไหล (ซ.ม.)</Form.Label>
                   <Form.Control
                     name="bigcorral"
                     required
                     type="text"
-                    placeholder="กรุณากรอกโรงเรือน"
+                    placeholder="กรุณากรอกความสูงหัวไหล่ (ซ.ม.)"
                     onChange={event => this.saveData(event)}
                   />
                 </Form.Group>
 
                 <Form.Group controlId="corral">
-                  <Form.Label>คอกโค</Form.Label>
+                  <Form.Label>ความยาวลำตัว (ซ.ม.)</Form.Label>
                   <Form.Control
                     name="corral"
                     required
                     type="text"
-                    placeholder="กรุณากรอกคอกโค"
+                    placeholder="กรุณากรอกความยาวลำตัว (ซ.ม.)"
                     onChange={event => this.saveData(event)}
                   />
                 </Form.Group>
 
-                <Form.Group controlId="formmasses">
-                  <Form.Label>ฝูงโค</Form.Label>
-                  <Form.Control
-                    name="herd_no"
-                    type="text"
-                    placeholder="กรุณากรอกฝูงโค"
-                    onChange={event => this.saveData(event)}
-                  />
-                </Form.Group>
+              
               </Col>
 
               <Col md={{ span: 4, offset: 1 }} className="text-center ">
+                <h1 style={{fontSize:"30px"}}> อัฟโหลดรูปภาพ</h1>
+                <p style={{color:"red"}}>* กรุณาอัฟโหลดรูปภาพจำนวน 4 รูประกอบด้วย ด้านหน้า ด้านบน ด้านซ้ายและด้านขวา</p>
                 <div>
                   <div className="container-fluid boxImgFrom  ">
                     {$imagePreview}
-                    <hr />
+                    
                     <input
                       type="file"
                       name="avatar"
@@ -468,9 +460,62 @@ class FormRegiscow extends Component {
                     />
                   </div>
                 </div>
+                <hr />
+                <div>
+                  <div className="container-fluid boxImgFrom  ">
+                    {$imagePreview}
+                
+                    <input
+                      type="file"
+                      name="avatar"
+                      onChange={event => this.fileChangedHandler(event)}
+                    />
+                  </div>
+                </div>
+                <hr />
+                <div>
+                  <div className="container-fluid boxImgFrom  ">
+                    {$imagePreview}
+                
+                    <input
+                      type="file"
+                      name="avatar"
+                      onChange={event => this.fileChangedHandler(event)}
+                    />
+                  </div>
+                </div>
+                <hr />
+                <div>
+                  <div className="container-fluid boxImgFrom ">
+                    {$imagePreview}
+                  
+                    <input
+                      type="file"
+                      name="avatar"
+                      onChange={event => this.fileChangedHandler(event)}
+                    />
+                  </div>
+                </div>
+                <hr />
               </Col>
+              
             </Form.Row>
+
             <hr />
+            <div className="text-center container-fluid" >
+                <Form.Group>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className="button-w2"
+                    style={{ outline: "none" }}
+                    onClick={() => this()}
+                  >
+                     เพิ่มข้อมูลพันธุ์ประวัติ
+                  </Button>{" "}
+
+                </Form.Group>
+              </div>
             <div className="row">
               <div className="text-center container-fluid">
                 <Form.Group>

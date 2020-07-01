@@ -4,10 +4,10 @@ import React, { Component } from "react";
 import HeaderLogin from "./../../HeaderLogin";
 import "./styh.css";
 import NavbarLogin from "./../../Navbar";
-import thor from "../Img/thor.jpg";
+import thor from "../Img/ss1.jpg";
 import { Card, Form } from "react-bootstrap";
 import axios from "axios";
-
+// import imgcow1 from "../Img/ควายป่า.jpg";
 // หน้า login แล้ว
 class Home extends Component {
   constructor(props) {
@@ -32,7 +32,9 @@ class Home extends Component {
 
   render() {
     return (
+      
       <div className="container-fluid ">
+       
         <div className="row ">
           <HeaderLogin />
         </div>
@@ -40,6 +42,7 @@ class Home extends Component {
           <NavbarLogin />
         </div>
         <div className="row ">
+          
           <div className="row container-fluid bg-boxbox">
             <div className="col-md-3">
               <Card style={{ width: "99%", height: "546px" }}>
@@ -50,44 +53,69 @@ class Home extends Component {
                 </Card.Body>
               </Card>
             </div>
-            <div className="col-md-7">
-              <Card.Header
-                style={{ backgroundColor: "#0044ffde", color: "#ffffff" }}
-              >
-                ข้อมูลฟาร์ม
-              </Card.Header>
-              <Form className="col-border">
-                <Form.Group controlId="formGridEmail">
-                  <Form.Label className="title2">ชื่อฟาร์ม</Form.Label>
-                  <Form.Control disabled value={this.state.user.user || ""} />
-                </Form.Group>
-                <Form.Group controlId="formGridEmail">
-                  <Form.Label className="title2">เจ้าของฟาร์ม</Form.Label>
-                  <Form.Control disabled value={this.state.user.fname || ""} />
-                </Form.Group>
-                <Form.Group controlId="formGridEmail">
-                  <Form.Label className="title2">ตำแหน่ง</Form.Label>
-                  <Form.Control
-                    disabled
-                    value={this.state.user.privilege || ""}
-                  />
-                </Form.Group>
-                <Form.Group controlId="formGridEmail">
-                  <Form.Label className="title2">ที่อยู่</Form.Label>
-                  <Form.Control
-                    disabled
-                    value={this.state.user.address || ""}
-                  />
-                </Form.Group>
-                <Form.Group controlId="formGridEmail">
-                  <Form.Label className="title2">ข้อมูลติดต่อ</Form.Label>
-                  <Form.Control
-                    disabled
-                    value={this.state.user.phone_num || ""}
-                  />
-                </Form.Group>
-              </Form>
-            </div>
+            <div className="col-md-8 pad-l "  >
+          <div className="row coler-bg2 border-c4">
+          <div className="row r-margin">
+            <Card border="primary" style={{ width: "18rem" , marginRight: "50px"}}>
+              <Card.Header>ตรวจสอบสถานะการจัดทำ</Card.Header>
+              <Card.Body>
+                <Card.Title>0</Card.Title>
+                <Card.Text>
+                  จำนวนรายการสั่งทำทั้งหมด
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card border="primary" style={{ width: "18rem" , marginRight: "50px"}}>
+              <Card.Header>ตรวจสอบสถานะการจัดทำ</Card.Header>
+              <Card.Body>
+                <Card.Title>0</Card.Title>
+                <Card.Text>
+                  จำนวนรายการที่รอดำเนินการ
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card border="primary" style={{ width: "18rem", marginRight: "10px" }}>
+              <Card.Header>ตรวจสอบสถานะการจัดทำ</Card.Header>
+              <Card.Body>
+                <Card.Title>0</Card.Title>
+                <Card.Text>
+                  จำนวนรายการที่กำลังดำเนินการ
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="row">
+          <Card border="primary" style={{ width: "18rem" , marginRight: "50px"}}>
+              <Card.Header>ตรวจสอบสถานะการจัดทำ</Card.Header>
+              <Card.Body>
+                <Card.Title>0</Card.Title>
+                <Card.Text>
+               จำนวนรายการที่เสร็จสิ้น
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card border="primary" style={{ width: "18rem" , marginRight: "50px"}}>
+              <Card.Header>ตรวจสอบสถานะการจัดทำ</Card.Header>
+              <Card.Body>
+                <Card.Title>0</Card.Title>
+                <Card.Text>
+                  จำนวนรายการสั่งทำที่ถูกยกเลิก
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card border="primary" style={{ width: "18rem" , marginRight: "50px"}}>
+              <Card.Header>ตรวจสอบสถานะการจัดส่ง</Card.Header>
+              <Card.Body>
+                <Card.Title>0</Card.Title>
+                <Card.Text>
+                  จำนวนรายการสั่งทำที่กำลังจัดส่ง
+                </Card.Text>
+              </Card.Body>
+            </Card>
+           
+          </div>
+          </div>
+        </div>
             <div className="col-md-2"></div>
           </div>
         </div>

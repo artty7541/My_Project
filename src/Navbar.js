@@ -49,7 +49,7 @@ render(){
 
         <div className="dropdown">
           <Link to="/regiscow">
-            <div className="dropbtn">ลงทะเบียนโค</div>
+            <div className="dropbtn">ลงทะเบียนกระบือ</div>
           </Link>
         </div>
 
