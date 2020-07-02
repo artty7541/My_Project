@@ -226,7 +226,7 @@ class FormRegiscow extends Component {
 
     return (
       <div>
-        <div className="coler-bg4 border-c" style={{ paddingTop: "40px" }}>
+        <div className="coler-bg4 border-c" >
           <Form>
             <Form.Row>
               <div className="container-fluid ">

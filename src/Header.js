@@ -28,8 +28,8 @@ class Header extends Component {
             <div className="dropdown" style={{textAlign:"center"}}>
               <div className="dropbtn1" style={{paddingTop:"20px"}}>ลงทะเบียน  <i className="fa fa-caret-down"></i></div>
               <div className="dropdown-content" style={{textAlign:"left"}}>
-                <Link to="/registor">เจ้าของฟาร์ม</Link>
-                <Link to="/registor2">เกษตรกร</Link>
+                <Link to="/registor">เกษตรกร</Link>
+                <Link to="/registor2">เจ้าหน้าที่</Link>
               </div>
             </div>
 

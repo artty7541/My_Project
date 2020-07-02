@@ -54,11 +54,11 @@ render(){
         </div>
 
         <div className="dropdown">
-          <div className="dropbtn">การจัดการแม่พันธุ์โค</div>
+          <div className="dropbtn">ค้นหาและตรวจสอบสถานะ</div>
           <div className="dropdown-content">
             
             <Link to="/induction">
-              <div>บันทึกการเหนี่ยวนำ</div>
+              <div>ค้นหาและตรวจสอบสถานะการขึ้นทะเบียน</div>
             </Link>
             <Link to="/breed">
               <div>บันทึกการผสมพันธุ์</div>
